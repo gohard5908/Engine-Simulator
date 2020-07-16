@@ -1,0 +1,9 @@
+【打开git bash】
+git remote add origin https://github.com/gohard5908/Engine-Simulator.git
+git push -u origin master
+
+【清除现有远程库地址】
+git remote rm origin
+【提交评论】
+git add .
+git commit -m ""
