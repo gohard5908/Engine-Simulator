@@ -1,0 +1,7 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\UI.StatusChart.resources
+obj\Debug\UI.csproj.GenerateResource.Cache
+bin\Debug\UI.dll
+bin\Debug\UI.pdb
+obj\Debug\UI.dll
+obj\Debug\UI.pdb

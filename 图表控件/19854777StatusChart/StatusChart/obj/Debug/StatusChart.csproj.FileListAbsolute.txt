@@ -1,0 +1,6 @@
+C:\Users\昊\Desktop\StatusChart\bin\Debug\Nobi.StatusChart.dll
+C:\Users\昊\Desktop\StatusChart\bin\Debug\Nobi.StatusChart.pdb
+C:\Users\昊\Desktop\StatusChart\obj\Debug\UI.StatusChart.resources
+C:\Users\昊\Desktop\StatusChart\obj\Debug\StatusChart.csproj.GenerateResource.Cache
+C:\Users\昊\Desktop\StatusChart\obj\Debug\Nobi.StatusChart.dll
+C:\Users\昊\Desktop\StatusChart\obj\Debug\Nobi.StatusChart.pdb

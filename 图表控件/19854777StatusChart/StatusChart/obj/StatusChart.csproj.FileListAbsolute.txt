@@ -1,0 +1,24 @@
+D:\My Documents\++设计++\NSC\StatusChart\bin\Debug\Nobi.StatusChart.dll
+D:\My Documents\++设计++\NSC\StatusChart\bin\Debug\Nobi.StatusChart.pdb
+D:\My Documents\++设计++\NSC\StatusChart\obj\Debug\ResolveAssemblyReference.cache
+D:\My Documents\++设计++\NSC\StatusChart\obj\Debug\Nobi.StatusChart.StatusChart.bmp
+D:\My Documents\++设计++\NSC\StatusChart\obj\Debug\UI.StatusChart.resources
+D:\My Documents\++设计++\NSC\StatusChart\obj\Debug\StatusChart.csproj.GenerateResource.Cache
+D:\My Documents\++设计++\NSC\StatusChart\obj\Debug\Nobi.StatusChart.dll
+D:\My Documents\++设计++\NSC\StatusChart\obj\Debug\Nobi.StatusChart.pdb
+E:\项目\wwb调试\StatusChartDemo\StatusChart\StatusChart\bin\Debug\Nobi.StatusChart.dll
+E:\项目\wwb调试\StatusChartDemo\StatusChart\StatusChart\bin\Debug\Nobi.StatusChart.pdb
+E:\项目\wwb调试\StatusChartDemo\StatusChart\StatusChart\obj\Debug\ResolveAssemblyReference.cache
+E:\项目\wwb调试\StatusChartDemo\StatusChart\StatusChart\obj\Debug\Nobi.StatusChart.StatusChart.bmp
+E:\项目\wwb调试\StatusChartDemo\StatusChart\StatusChart\obj\Debug\UI.StatusChart.resources
+E:\项目\wwb调试\StatusChartDemo\StatusChart\StatusChart\obj\Debug\StatusChart.csproj.GenerateResource.Cache
+E:\项目\wwb调试\StatusChartDemo\StatusChart\StatusChart\obj\Debug\Nobi.StatusChart.dll
+E:\项目\wwb调试\StatusChartDemo\StatusChart\StatusChart\obj\Debug\Nobi.StatusChart.pdb
+E:\项目\wwb调试\StatusChartDemo\src\StatusChart\bin\Debug\Nobi.StatusChart.dll
+E:\项目\wwb调试\StatusChartDemo\src\StatusChart\bin\Debug\Nobi.StatusChart.pdb
+E:\项目\wwb调试\StatusChartDemo\src\StatusChart\obj\Debug\ResolveAssemblyReference.cache
+E:\项目\wwb调试\StatusChartDemo\src\StatusChart\obj\Debug\Nobi.StatusChart.StatusChart.bmp
+E:\项目\wwb调试\StatusChartDemo\src\StatusChart\obj\Debug\UI.StatusChart.resources
+E:\项目\wwb调试\StatusChartDemo\src\StatusChart\obj\Debug\StatusChart.csproj.GenerateResource.Cache
+E:\项目\wwb调试\StatusChartDemo\src\StatusChart\obj\Debug\Nobi.StatusChart.dll
+E:\项目\wwb调试\StatusChartDemo\src\StatusChart\obj\Debug\Nobi.StatusChart.pdb

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>访问量统计</title>
+</head>
+<body>
+<div id="chart1" style="width:600px; height: 400px;"></div>
+<script type="text/javascript" src="echarts.min.js"></script>
+<script src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+    //指定图标的配置和数据
+var option = {
+    xAxis: {
+        type: 'value',
+        name: 'x轴',
+		min:500.0,
+		max:3500.0
+    },
+    yAxis: {
+        type: 'value',
+        name: 'y轴',
+		min:1.0,
+		max:1.8
+		//min: function(value) {return value.min;},
+		//max: function(value) {return value.max;}
+    },
+    series: [{
+		name: '失速线',
+		symbol: "none",
+        data: [
+						[720, 1.039],
+						[881.6, 1.066],
+						[1129, 1.112],
+						[1397, 1.162],
+						[1636, 1.217],
+						[1884, 1.286], 
+						[2049, 1.335],
+						[2288, 1.408],
+						[2563, 1.492],
+						[2770, 1.558],
+						[2955, 1.618],
+						[3130, 1.675],
+						[3276, 1.722]
+        ],
+        type: 'line',
+		lineStyle: {
+						color: '#FF4500' //改变折线颜色
+					}	
+    },
+	{	
+		name: '特性曲线13',
+		symbol: "none",
+        data: [
+					[3276.0, 1.722],
+					[3310.0,1.712],
+					[3338.0,1.701],
+					[3360.0,1.688],
+					[3374.0,1.674],
+					[3383.0,1.66],
+					[3386.0,1.642],
+					[3386.0,1.627],
+					[3386.0,1.609],
+					[3386.0,1.59],
+					[3386.0,1.571],
+					[3386.0,1.551]
+        ],
+        type: 'line',
+		lineStyle: {
+						color: '#8cd5c2' //改变折线颜色
+					}		
+    },
+	{	
+		name: '特性曲线12',
+		symbol: "none",
+        data: [
+					[3130.0, 1.675],
+					[3247.0, 1.664],
+					[3312.0, 1.642],
+					[3331.0, 1.585],
+					[3331.0, 1.461]
+				
+        ],
+        type: 'line',
+		lineStyle: {
+						color: '#8cd5c2' //改变折线颜色
+					}		
+    },
+		{	
+		name: '特性曲线11',
+		symbol: "none",
+        data: [
+					[2955.0, 1.618],
+					[3138.0, 1.602],
+					[3241.0, 1.572],
+					[3273.0, 1.527],
+					[3273.0, 1.372]
+				
+        ],
+        type: 'line',
+		lineStyle: {
+						color: '#8cd5c2' //改变折线颜色
+					}		
+    },
+	{	
+		name: '特性曲线10',
+		symbol: "none",
+        data: [
+					[2770.0, 1.558],
+					[3022.0, 1.55],
+					[3166.0, 1.522],
+					[3212.0, 1.474],
+					[3212.0, 1.291]
+				
+        ],
+        type: 'line',
+		lineStyle: {
+						color: '#8cd5c2' //改变折线颜色
+					}		
+    },
+	{	
+		name: '特性曲线9',
+		symbol: "none",
+        data: [
+					[2563.0, 1.492],
+					[2872.0, 1.496],
+					[3059.0, 1.471],
+					[3138.0, 1.42],
+					[3138.0, 1.209]
+				
+        ],
+        type: 'line',
+		lineStyle: {
+						color: '#8cd5c2' //改变折线颜色
+					}		
+    },
+		{	
+		name: '特性曲线8',
+		symbol: "none",
+        data: [
+					[2288.0, 1.408],
+					[2662.0, 1.426],
+					[2899.0, 1.406],
+					[3007.0, 1.349],
+					[3019.0, 1.096]
+				
+        ],
+        type: 'line',
+		lineStyle: {
+						color: '#8cd5c2' //改变折线颜色
+					}		
+    },
+		{	
+		name: '特性曲线7',
+		symbol: "none",
+        data: [
+					[2049.0, 1.335],
+					[2457.0, 1.363],
+					[2728.0, 1.347],
+					[2869.0, 1.289],
+					[2895.0, 1.247],
+					[2895.0,1.017]
+				
+        ],
+        type: 'line',
+		lineStyle: {
+						color: '#8cd5c2' //改变折线颜色
+					}		
+    },
+		{	
+		name: '特性曲线6',
+		symbol: "none",
+        data: [
+					[1884.0, 1.286],
+					[2285.0, 1.311],
+					[2566.0, 1.297],
+					[2730.0, 1.243],
+					[2787.0, 1.161],
+					[2787.0,1.000]
+				
+        ],
+        type: 'line',
+		lineStyle: {
+						color: '#8cd5c2' //改变折线颜色
+					}		
+    },
+	{	
+		name: '特性曲线1',
+		symbol: "none",
+        data: [
+					[720.0, 1.039],
+					[1149.0,1.032],
+					[1422.0,1.023],
+					[1548.0,1.016],
+					[1616.0,1.009]
+        ],
+        type: 'line',
+		lineStyle: {
+						color: '#8cd5c2' //改变折线颜色
+					}
+    },
+	{	
+		name: '特性曲线2',
+		symbol: "none",
+        data: [
+					[881.0, 1.066],
+					[1024.0,1.072],
+					[1163.0,1.072],
+					[1401.0,1.062],
+					[1685.0,1.046],
+					[1782.0,1.034],
+					[1838.0,1.009]
+        ],
+        type: 'line',
+		lineStyle: {
+						color: '#8cd5c2' //改变折线颜色
+					}
+    },
+	{	
+		name: '特性曲线3',
+		symbol: "none",
+        data: [
+					[1129.0, 1.112],
+					[1499.0,1.106],
+					[1803.0,1.082],
+					[2035.0,1.045],
+					[2148.0,1.013]
+        ],
+        type: 'line',
+		lineStyle: {
+						color: '#8cd5c2' //改变折线颜色
+					}
+    },
+	{	
+		name: '特性曲线4',
+		symbol: "none",
+        data: [
+					[1636.0, 1.217],
+					[1816.0,1.225],
+					[1977.0,1.227],
+					[2241.0,1.212],
+					[2426.0,1.173],
+					[2536.0,1.117],
+					[2576.0,1.045],
+					[2577.0,1.004]
+        ],
+        type: 'line',
+		lineStyle: {
+						color: '#8cd5c2' //改变折线颜色
+					}
+    },
+	{	
+		name: '特性曲线5',
+		symbol: "none",
+        data: [
+					[1397.0, 1.162],
+					[1686.0,1.162],
+					[1929.0,1.149],
+					[2123.0,1.123],
+					[2322.0,1.065],
+					[2396.0,1.016]
+        ],
+        type: 'line',
+		lineStyle: {
+						color: '#8cd5c2' //改变折线颜色
+					}
+    }
+	/*工作点test
+	,
+	{
+            name:'工作点',
+            type:'scatter',
+            data:[[3210,1.449]],
+			itemStyle:{
+						normal:{
+							color:'#FF0000'
+								}
+					}
+        }
+	工作点test */
+	]
+};
+    //初始化echarts实例
+    var myChart = echarts.init(document.getElementById('chart1'));
+	
+	
+	var Item=function(){
+			return {
+				name:'测试点',
+				type:'scatter',
+				itemStyle:{
+						normal:{
+							color:'#FF0000'
+								}
+					},
+				data:[]
+				}
+		}
+	var tp=new Item();
+	//	var xtest=3000.0;
+	//	var ytest=1.449;
+	//tp.data=[[xtest,ytest]];
+	//var tp_test = eval('('+window.external.strJson_Fan+')');
+		//var xtest=tp_test.data;
+		//tp.data=[];
+		//tp.data.push([xtest,ytest]);
+		 //
+		 	 
+	
+    //使用制定的配置项和数据显示图表
+	
+	//alert(tp_test);
+		//ajax动态获取数据
+                $.ajax({
+                    type: 'get',
+                    url: 'SS_Sim_Data.json',
+                    //data: {},
+                    dataType: 'json',
+                    async: true,
+					cache: false,
+                    success: function (result) {
+                        if (result) {
+                            // 获取json值
+								tp.data.push([result.SS_simData.FAN.Wc,result.SS_simData.FAN.PR]); //实际上是[Wc,PR]值
+								option.series.push(tp);
+								myChart.setOption(option);
+								 //alert(result[0].data);	// option.series = result.series;
+                            // 为echarts对象加载数据 
+                              // myChart.setOption(option);
+                        } 
+                    },
+                    error: function () {
+                         alert("Error");
+                    }
+                });
+				
+/*$.ajax({
+    type : "post",
+    async : true,
+    url : "${pageContext.request.contextPath}/demo/echartsView",  //这里注意一下是何含义，如何改
+    dataType:"json",
+    success:function(result) {
+        
+        if(result)
+        {
+           var obj = eval('(' + result + ')'); 
+         
+		  myChart.hideLoading();
+             myChart.setOption({
+                 xAxis:{  
+                     data:obj.xAxisData
+                 },  
+                 series:obj.seriesList
+             });
+		 
+        }
+                  
+   },
+    error : function(errorMsg) {
+        //请求失败时执行该函数
+    alert("请求数据失败!");
+ //   myChart.hideLoading();
+    }	
+	});
+	*/
+	
+</script>
+	<button onclick="window.external.MyMessageBox('javascript')">
+      javascript访问C#代码
+	</button>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

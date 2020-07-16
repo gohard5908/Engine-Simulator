@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>退化数据显示</title>
+</head>
+<body>
+<div id="chart1" style="width:500px; height: 300px;"></div>
+<script type="text/javascript" src="echarts.min.js"></script>
+<script src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+    //指定图标的配置和数据
+var option = {
+    xAxis: {
+        type: 'value',
+        name: 'x轴',
+		min:0.0,
+		max:200.0
+    },
+    yAxis: {
+        type: 'value',
+        name: 'y轴'
+		
+		//min: function(value) {return value.min;},
+		//max: function(value) {return value.max;}
+    },
+    series: [
+	
+	/*工作点test
+	,
+	{
+            name:'工作点',
+            type:'scatter',
+            data:[[3210,1.449]],
+			itemStyle:{
+						normal:{
+							color:'#FF0000'
+								}
+					}
+        }
+	工作点test */
+	]
+};
+    //初始化echarts实例
+    var myChart = echarts.init(document.getElementById('chart1'));
+	
+	
+	var Item=function(){
+			return {
+				name:'传感器数据',
+				type:'line',
+				itemStyle:{
+						normal:{
+							color:'#FF0000'
+								}
+					},
+				data:[]
+				}
+		}
+	var tp=new Item();	
+	            
+				$.ajax({
+                    type: 'get',
+                    url: 'Deter_Sim_Data.json',
+                    //data: {},
+                    dataType: 'json',
+                    async: true,
+					cache: false,
+                    success: function (result) {
+                        if (result) {
+                            // 获取json值
+							for(i in result.cycles_out){
+								tp.data.push([result.cycles_out[i],result.TSFC_out[i]]);  //实际上是[Wc,PR]值
+							}
+							
+							option.series.push(tp);
+								myChart.setOption(option);
+								 //alert(result[0].data);	// option.series = result.series;
+                            // 为echarts对象加载数据 
+                              // myChart.setOption(option);
+                        } 
+                    },
+                    error: function () {
+                         alert("Error");
+                    }
+                });
+	//	var xtest=3000.0;
+	//	var ytest=1.449;
+	//tp.data=[[xtest,ytest]];
+	//var tp_test = eval('('+window.external.strJson_Fan+')');
+		//var xtest=tp_test.data;
+		//tp.data=[];
+		//tp.data.push([xtest,ytest]);
+		 //
+		 	 
+	
+    //使用制定的配置项和数据显示图表
+	
+	//alert(tp_test);
+		//ajax动态获取数据
+               
+				
+/*$.ajax({
+    type : "post",
+    async : true,
+    url : "${pageContext.request.contextPath}/demo/echartsView",  //这里注意一下是何含义，如何改
+    dataType:"json",
+    success:function(result) {
+        
+        if(result)
+        {
+           var obj = eval('(' + result + ')'); 
+         
+		  myChart.hideLoading();
+             myChart.setOption({
+                 xAxis:{  
+                     data:obj.xAxisData
+                 },  
+                 series:obj.seriesList
+             });
+		 
+        }
+                  
+   },
+    error : function(errorMsg) {
+        //请求失败时执行该函数
+    alert("请求数据失败!");
+ //   myChart.hideLoading();
+    }	
+	});
+	*/
+	myChart.setOption(option);
+		
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
